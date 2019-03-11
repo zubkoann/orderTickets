@@ -1,0 +1,11 @@
+Дана таблица products с полями id (код товара), name (наименование товара), kind (тип товара, весовой или штучный), price (стоимость товара). 
+1. Составить запрос SQL, который выберет все товары с ценой больше 50.
+SELECT  *  FROM  products  WHERE  price>50
+2. Составить запрос SQL, который удалит из таблицы все весовые товары. Штучные товары определяются значением 1 в поле kind.
+"DELETE *FROM products  WHERE kind  != '1' 
+"DELETE *FROM products  WHERE NOT kind  = '1' 
+3. Составить запрос SQL, который выдаст число занесенных в таблицу товаров и среднюю цену товара.
+SELECT COUNT(*) FROM products 
+SELECT AVG(price) FROM products 
+4. Составить запрос SQL, который выбирает из таблицы все записи с нечетными id и записывает их в новую таблицу products_1.
+INSERT INTO products_1(id, name, kind, price) SELECT id, name, kind, price FROM products where (id % 2) = 1
