@@ -40,5 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     let cinema=new Cinema(hallConfig,priceConfig, Card)
     cinema.init();
+
 })
 
